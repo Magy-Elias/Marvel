@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (4.8.2)
+  - CryptoSwift (0.15.0)
+  - Kingfisher (4.10.1)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
+  - Result (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
+  - CryptoSwift (~> 0.15.0)
+  - Kingfisher
+  - Moya (~> 13.0.1)
+  - NVActivityIndicatorView (~> 4.7.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - CryptoSwift
+    - Moya
+    - NVActivityIndicatorView
+    - Result
+  trunk:
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  CryptoSwift: 769f58a9e89f64e8796c2e59ce5f002dc81a2438
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+
+PODFILE CHECKSUM: 316c834f575bb6e28c1a8245442619390e167fa0
+
+COCOAPODS: 1.8.0.beta.1

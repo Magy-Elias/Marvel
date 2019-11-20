@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Character View Controller-->
+        <scene sceneID="EfN-9N-yTR">
+            <objects>
+                <viewController storyboardIdentifier="CharacterViewController" id="odG-b4-AsF" customClass="CharacterViewController" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ac7-Oi-6vc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="maB-ZO-vOi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="Gio-Mn-CKP"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNU-OL-F0R">
+                                <rect key="frame" x="0.0" y="419" width="414" height="443"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGr-Ly-BRU">
+                                        <rect key="frame" x="10" y="10" width="394" height="423"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.2470588235" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="EGr-Ly-BRU" secondAttribute="bottom" constant="10" id="FE9-pK-7rx"/>
+                                    <constraint firstAttribute="trailing" secondItem="EGr-Ly-BRU" secondAttribute="trailing" constant="10" id="MDf-8c-OtP"/>
+                                    <constraint firstItem="EGr-Ly-BRU" firstAttribute="top" secondItem="XNU-OL-F0R" secondAttribute="top" constant="10" id="Zod-aE-Kmk"/>
+                                    <constraint firstItem="EGr-Ly-BRU" firstAttribute="leading" secondItem="XNU-OL-F0R" secondAttribute="leading" constant="10" id="qAp-Uc-duK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.2470588235" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="maB-ZO-vOi" firstAttribute="leading" secondItem="wjN-tL-xaD" secondAttribute="leading" id="1Wa-bA-u8P"/>
+                            <constraint firstItem="XNU-OL-F0R" firstAttribute="leading" secondItem="wjN-tL-xaD" secondAttribute="leading" id="7E6-62-dE0"/>
+                            <constraint firstItem="wjN-tL-xaD" firstAttribute="bottom" secondItem="XNU-OL-F0R" secondAttribute="bottom" id="9zs-BS-2se"/>
+                            <constraint firstItem="maB-ZO-vOi" firstAttribute="trailing" secondItem="wjN-tL-xaD" secondAttribute="trailing" id="SdL-qA-XK6"/>
+                            <constraint firstItem="XNU-OL-F0R" firstAttribute="top" secondItem="maB-ZO-vOi" secondAttribute="bottom" id="a0G-T3-uWf"/>
+                            <constraint firstItem="wjN-tL-xaD" firstAttribute="trailing" secondItem="XNU-OL-F0R" secondAttribute="trailing" id="aPR-qi-Sdh"/>
+                            <constraint firstItem="maB-ZO-vOi" firstAttribute="top" secondItem="wjN-tL-xaD" secondAttribute="top" id="v9P-kc-Ibs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wjN-tL-xaD"/>
+                    </view>
+                    <connections>
+                        <outlet property="characterDetailsLabel" destination="EGr-Ly-BRU" id="9Dr-DA-GFF"/>
+                        <outlet property="characterImage" destination="maB-ZO-vOi" id="dQO-Qq-H1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWm-Gg-8ei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="-31.473214285714285"/>
+        </scene>
+    </scenes>
+</document>

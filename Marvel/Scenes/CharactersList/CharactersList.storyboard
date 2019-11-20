@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pJc-nt-NnT">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="6yP-t6-CnI">
+            <objects>
+                <navigationController id="pJc-nt-NnT" customClass="BaseNavigationController" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pkr-Ax-7l6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Q2Y-B6-slN" kind="relationship" relationship="rootViewController" id="nCp-EQ-Oln"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Flt-0f-1CV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1076" y="41"/>
+        </scene>
+        <!--Characters List View Controller-->
+        <scene sceneID="Zxc-7s-Vqi">
+            <objects>
+                <viewController storyboardIdentifier="CharactersListViewController" id="Q2Y-B6-slN" customClass="CharactersListViewController" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M5O-eG-Jha">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Search hero name..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP6-Sx-EHd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.25098039220000001" green="0.2470588235" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Q2Y-B6-slN" id="nww-WN-KF1"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JbU-tu-uSY">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.2470588235" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterTableViewCell" id="xol-V2-z1l" customClass="CharacterTableViewCell" customModule="Marvel" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xol-V2-z1l" id="XMh-HL-nIV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Q2Y-B6-slN" id="3d9-yZ-sNf"/>
+                                    <outlet property="delegate" destination="Q2Y-B6-slN" id="9rm-8X-Ps7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZT8-tP-lyJ" firstAttribute="trailing" secondItem="QP6-Sx-EHd" secondAttribute="trailing" id="6dh-Lf-zrh"/>
+                            <constraint firstItem="ZT8-tP-lyJ" firstAttribute="trailing" secondItem="JbU-tu-uSY" secondAttribute="trailing" id="DBr-xL-3JC"/>
+                            <constraint firstItem="QP6-Sx-EHd" firstAttribute="top" secondItem="ZT8-tP-lyJ" secondAttribute="top" id="SZv-7L-G3G"/>
+                            <constraint firstItem="QP6-Sx-EHd" firstAttribute="leading" secondItem="ZT8-tP-lyJ" secondAttribute="leading" id="VA6-gQ-jSF"/>
+                            <constraint firstItem="ZT8-tP-lyJ" firstAttribute="bottom" secondItem="JbU-tu-uSY" secondAttribute="bottom" id="X4n-Sx-ipZ"/>
+                            <constraint firstItem="JbU-tu-uSY" firstAttribute="top" secondItem="QP6-Sx-EHd" secondAttribute="bottom" id="fwg-FS-9Js"/>
+                            <constraint firstItem="JbU-tu-uSY" firstAttribute="leading" secondItem="ZT8-tP-lyJ" secondAttribute="leading" id="u7j-7x-yTg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZT8-tP-lyJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E8F-qd-qUM"/>
+                    <connections>
+                        <outlet property="charactersListTableView" destination="JbU-tu-uSY" id="T6l-BO-0yH"/>
+                        <outlet property="searchBar" destination="QP6-Sx-EHd" id="Jep-VU-YOq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pmX-pQ-kd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265.21739130434787" y="40.848214285714285"/>
+        </scene>
+    </scenes>
+</document>
